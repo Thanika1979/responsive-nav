@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url(../images/project-1.jpg);
+}
+nav{
+    background-color: rgb(34, 228, 99);
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: black;
+    font-size: 2.25rem;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: rgb(24, 22, 22);
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+a.active:hover{
+    background: rgb(10, 100, 55);
+    transition: .5s;
+}
+#btn, 
+#cancel{
+    font-size: 2rem;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+@media (max-width:952px){
+    label.logo{
+        font-size: 2.25rem;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 1rem;
+    }    
+}
+@media(max-width:858px) {
+    #btn{
+        display: block;
+    }
+    ul{ 
+        position: fixed;
+        height: 100%;
+        background: #e28686;
+        padding:80px;
+        text-align: center;
+        left: -100%;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 2rem;
+        
+    }
+    a.active:hover{
+        background: none;
+        color: rgb(206, 192, 192);
+        transition: .5s;
+    }
+    #check:checked ~ ul{
+        
+        left: 0;
+    }
+    .checkbox:checked ~ #btn{
+        display: none;
+    }
+    
+    
+}
